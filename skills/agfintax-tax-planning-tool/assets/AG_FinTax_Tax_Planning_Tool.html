@@ -736,7 +736,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
     <div style="background:var(--gray1);border-radius:8px;padding:15px;margin-bottom:12px;border:1px solid var(--gray2)">
       <div class="sub-hdr" style="margin-top:0">Investment 1</div>
       <div class="grid2">
-        <div class="field"><label>Investment Amount ($) <span style="font-weight:400;color:var(--gray3)">(default: $50k if income &lt; $500k, else $100k — editable)</span></label><input type="number" id="mcg_inv" placeholder="0" oninput="markManual(this)"></div>
+        <div class="field"><label>Investment Amount ($) <span style="font-weight:400;color:var(--gray3)">(default 1:4 investment: $50,000 if income &lt; $500k, $100,000 if ≥ $500k — editable)</span></label><input type="number" id="mcg_inv" placeholder="0" oninput="markManual(this)"></div>
         <div class="field"><label>Strategy / Offering</label>
           <select id="mcg_fund" onchange="setMultiple()">
             <option value="4">Strategy A — 4× Deduction Ratio (Recommended)</option>
@@ -797,8 +797,8 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
     <div id="og-badge" class="strat-savings-box na"><div><div class="lbl">Oil &amp; Gas Est. Year 1 Tax Savings</div><div style="font-size:12px;color:var(--gray3)">~85% of investment deductible in Year 1 via IDC + depletion</div></div><div class="val" id="og-sav-display">—</div></div>
     <div class="grid2">
       <div class="field"><label>Interested in Oil & Gas Investment?</label>
-        <select id="og_interest" onchange="recalc()"><option value="No">No</option><option value="Yes">Yes</option></select></div>
-      <div class="field"><label>Investment Amount ($)</label><input type="number" id="og_inv" placeholder="0" onchange="recalc()"></div>
+        <select id="og_interest" onchange="markManual(this)"><option value="No">No</option><option value="Yes">Yes</option></select></div>
+      <div class="field"><label>Investment Amount ($) <span style="font-weight:400;color:var(--gray3)">(default: $50,000 — editable)</span></label><input type="number" id="og_inv" placeholder="0" oninput="markManual(this)"></div>
       <div class="field"><label>IDC Deduction (Auto — ~85% of investment)</label><div id="og_idc" class="calc-disp">—</div></div>
       <div class="field"><label>Est. Year 1 Tax Savings (Auto)</label><div id="og_tax_sav" class="calc-disp">—</div></div>
     </div>
@@ -1025,7 +1025,8 @@ const TAX={
   luxAutoYr1NoBonus:12200,       // VERIFY — 2025 figure; passenger-auto yr-1 cap without bonus
   scorpMinProfit:40000,          // AG FinTax policy threshold
   ozDefaultStPct:0.25,           // AG FinTax policy: default QOZ investment = 25% of short-term gains
-  mcgDefaultIncomeThreshold:500000, mcgDefaultLow:50000, mcgDefaultHigh:100000, // AG FinTax policy: default bonus-dep investment
+  mcgDefaultIncomeThreshold:500000, mcgDefaultLow:50000, mcgDefaultHigh:100000, // AG FinTax policy: default 1:4 bonus-dep investment
+  ogDefault:50000,               // AG FinTax policy: default oil & gas investment for every prospect
   scorpSalaryPct:0.25,           // default starting point only — not an IRS rule
   ltcgRate:0.20, niitRate:0.038,
   niitThreshold:{MFJ:250000,Single:200000,HoH:200000,MFS:125000},
@@ -1555,6 +1556,10 @@ function recalc(){
   setBadge("oz-badge","oz-sav-display",ozDeferredTax,ozEligible);
 
   // OIL & GAS (working interest — not passive)
+  // policy defaults for every prospect with income: interest = Yes, $50k (until the rep changes either)
+  const ogSel=document.getElementById("og_interest"),ogAmt=document.getElementById("og_inv");
+  if(ogSel&&!ogSel.dataset.manual)sv("og_interest",state.grossInc>0?"Yes":"No");
+  if(ogAmt&&!ogAmt.dataset.manual)sv("og_inv",state.grossInc>0?TAX.ogDefault:"");
   const ogInv=gv("og_interest")==="Yes"?gn("og_inv"):0;
   const ogIDC=ogInv*TAX.ogDeductPct;state.og_ded=ogIDC;
   st("og_idc",fmt(ogIDC));st("og_tax_sav",fmt(ogIDC*CR));

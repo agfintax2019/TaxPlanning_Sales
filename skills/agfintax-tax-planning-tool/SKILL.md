@@ -8,7 +8,7 @@ description: Maintain, fix, extend, or annually update the AG FinTax Tax Plannin
 A self-contained HTML page (no build step, no server). Sales reps open it in a browser, enter the prospect's numbers across 7 tabs, and show the **Client Preview** or download the **Excel** workbook.
 
 - **Tool:** `assets/AG_FinTax_Tax_Planning_Tool.html`, the single source of truth. Edit this file only.
-- **Regression test:** `scripts/test_tool.cjs`, a headless Chromium run of 79 checks (calculations, tabs, Excel, mobile layout).
+- **Regression test:** `scripts/test_tool.cjs`, a headless Chromium run of 84 checks (calculations, tabs, Excel, mobile layout).
 - **Constants and sources:** `references/tax-constants.md`
 - **How every number is calculated:** `references/calculation-logic.md`
 - **Fix history:** `CHANGELOG.md`

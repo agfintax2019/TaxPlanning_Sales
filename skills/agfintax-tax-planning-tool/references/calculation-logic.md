@@ -29,7 +29,7 @@ All money inputs are floored at 0. The plan year is 2026: W-2 and business profi
 | 12 | Opportunity Zone | Defaults to 25% of short-term gains (policy); editable and sticky once typed; ≤ gains left after TLH | ST portion × CR + LT portion × cgRate (ST used first; tax **deferred**) | Without ST gains, nothing is counted until an amount is entered |
 | 13 | Defined Benefit | min(contribution, business earned income − Solo 401k) | Ded × CR | Requires business income |
 | 14 | Bonus-dep investment | K-1 = amount × multiple. Investment 1 defaults to $50k if gross income < $500k, else $100k (policy; editable and sticky) | Usable loss × CR | Material participation: combined loss ≤ min(pass-through profit + EBL, income left after all other deductions), and the excess becomes an NOL (Year 2 savings = min(NOL, 80% × Year 2 income) × CR). Passive: limited to passive income left after cost seg. EBL is shared by both investments and depends on filing status |
-| 15 | Oil & gas | 85% × investment | Ded × CR | Working interest (non-passive) |
+| 15 | Oil & gas | 85% × investment. Defaults to Interested = Yes and $50,000 for every prospect with income (policy; editable and sticky) | Ded × CR | Working interest (non-passive) |
 | 16 | Donations | DAF + min(5 × donation, 50% AGI budget left) | (Deduction − 0.5% AGI floor) × (min(fed, 35%) + state) | Gross income ≥ $1M. Carryforward shown |
 | 17 | R&D credit | — | Credit amount (1:1) | R&D = Yes and at least one qualifying activity checked |
 

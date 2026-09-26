@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-26 (c) — Default investments
+- **Oil & Gas** defaults to Interested = Yes and **$50,000** for every prospect with income (editable).
+- **1:4 bonus-depreciation investment** defaults: $50,000 under $500k income, $100,000 at or above (unchanged from (b); label clarified).
+- Test suite: 84 checks.
+
 ## 2026-09-26 (b) — Sales-team feedback
 - **401(k):** existing contributions are no longer shown as savings. The new strategy #18, **Maximize 401(k) Contributions**, counts only the unused room (limit − current deferral, capped at W-2 pay) for the TP and spouse. The Solo 401(k) deferral limit accounts for the recommended max-out.
 - **Optional drill-downs** (collapsed by default, tagged "Sales rep can skip"): Other Income (passive, interest/dividends, other) and Unrealized Gains / Losses & Tax-Loss Harvesting.

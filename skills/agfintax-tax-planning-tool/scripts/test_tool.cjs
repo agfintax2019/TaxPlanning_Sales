@@ -175,6 +175,7 @@ const money = n => "$" + Math.round(n).toLocaleString("en-US");
   await set("oz_cg_amt", ""); await set("has_losses", "No"); await set("cg_lt", "");
 
   // ── Bonus dep investments: shared EBL cap, MFJ $512k above business income
+  await set("og_interest", "No");   // isolate the K-1 cap from the O&G default
   await set("mcg_inv", 250000); await set("mcg_mat", "Yes");               // 1,000,000 K-1
   await set("show_inv2", "Yes"); await set("mcg2_inv", 100000); await set("mcg2_mat", "Yes"); // +400,000
   check("K-1 loss never exceeds remaining income (rest → NOL)", await txt("sum-k1-loss"), "-" + money(150000));
@@ -241,12 +242,17 @@ const money = n => "$" + Math.round(n).toLocaleString("en-US");
   // ── Bonus-dep default investment (fresh page): $50k under $500k income, $100k above
   await page.reload();
   check("no default investment with no income", await page.inputValue("#mcg_inv"), "");
+  check("no O&G default with no income", await page.inputValue("#og_inv"), "");
   await set("biz_profit_1", 300000);
   check("default investment $50k when income < $500k", await page.inputValue("#mcg_inv"), "50000");
   await set("w2_tp", 400000);
   check("default investment $100k when income ≥ $500k", await page.inputValue("#mcg_inv"), "100000");
-  await set("mcg_inv", 75000); await set("w2_tp", 0);
+  check("O&G stays $50k when income ≥ $500k", await page.inputValue("#og_inv"), "50000");
+  check("O&G defaults to Yes / $50k (income < $500k)", await page.evaluate(() => [gv("og_interest"), gv("og_inv")].join("/")), "Yes/50000");
+  check("O&G default savings", await txt("sav-s15"), money(50000 * 0.85 * 0.37));
+  await set("mcg_inv", 75000); await set("og_inv", 25000); await set("w2_tp", 0);
   check("manual investment amount not overwritten", await page.inputValue("#mcg_inv"), "75000");
+  check("manual O&G amount not overwritten", await page.inputValue("#og_inv"), "25000");
 
   // ── Mobile: no horizontal page scroll at 390px
   await page.setViewportSize({ width: 390, height: 844 });
