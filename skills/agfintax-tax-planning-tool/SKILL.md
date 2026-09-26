@@ -1,6 +1,6 @@
 ---
 name: agfintax-tax-planning-tool
-description: Maintain, fix, extend, or annually update the AG FinTax Tax Planning Strategy Tool, the single-file HTML calculator the AG FinTax sales team uses on client calls. It models 17 strategies (S-Corp, home office, vehicle, hiring children, Solo 401k, HSA, SEHI, Accountable Plan, Augusta, cost seg, TLH, Opportunity Zone, Defined Benefit, bonus-depreciation investments, oil & gas, DAF/leveraged donations, R&D credit) and produces a client preview plus an Excel export. Use this skill whenever the user asks to fix a bug in the tax planning tool, change a calculation, update tax limits for a new year (401k, HSA, SS wage base, brackets, EBL, standard deduction), add or remove a strategy, change tooltips or sales copy, change the client preview or Excel export, re-brand the tool, or deploy or share it with the sales team. Also trigger on "tax planning tool", "sales tool", "strategy calculator", "the AG FinTax calculator", "update the tool for 2027", or requests that mention the tool's tabs (Profile, Income, Business, Deductions, Capital Gains, Investments, Strategies).
+description: Maintain, fix, extend, or annually update the AG FinTax Tax Planning Strategy Tool, the single-file HTML calculator the AG FinTax sales team uses on client calls. It models 18 strategies (S-Corp, maximize 401k, home office, vehicle, hiring children, Solo 401k, HSA, SEHI, Accountable Plan, Augusta, cost seg, TLH, Opportunity Zone, Defined Benefit, bonus-depreciation investments, oil & gas, DAF/leveraged donations, R&D credit) and produces a client preview plus an Excel export. Use this skill whenever the user asks to fix a bug in the tax planning tool, change a calculation, update tax limits for a new year (401k, HSA, SS wage base, brackets, EBL, standard deduction), add or remove a strategy, change tooltips or sales copy, change the client preview or Excel export, re-brand the tool, or deploy or share it with the sales team. Also trigger on "tax planning tool", "sales tool", "strategy calculator", "the AG FinTax calculator", "update the tool for 2027", or requests that mention the tool's tabs (Profile, Income, Business, Deductions, Capital Gains, Investments, Strategies).
 ---
 
 # AG FinTax Tax Planning Strategy Tool
@@ -8,7 +8,7 @@ description: Maintain, fix, extend, or annually update the AG FinTax Tax Plannin
 A self-contained HTML page (no build step, no server). Sales reps open it in a browser, enter the prospect's numbers across 7 tabs, and show the **Client Preview** or download the **Excel** workbook.
 
 - **Tool:** `assets/AG_FinTax_Tax_Planning_Tool.html`, the single source of truth. Edit this file only.
-- **Regression test:** `scripts/test_tool.cjs`, a headless Chromium run of 65 checks (calculations, tabs, Excel, mobile layout).
+- **Regression test:** `scripts/test_tool.cjs`, a headless Chromium run of 79 checks (calculations, tabs, Excel, mobile layout).
 - **Constants and sources:** `references/tax-constants.md`
 - **How every number is calculated:** `references/calculation-logic.md`
 - **Fix history:** `CHANGELOG.md`
@@ -43,7 +43,7 @@ A self-contained HTML page (no build step, no server). Sales reps open it in a b
 1. Add the input card to the right tab (copy an existing `card` block and its `strat-savings-box` badge).
 2. Compute it in `recalc()`: set `state.<key>` to the deduction and, for anything that isn't simply deduction × combined rate, set `state.<key>_sav` and use `type:"custom"` (or `"credit"` for a dollar-for-dollar credit, `"se"` for an SE-tax saving).
 3. Add it to `STRATEGIES` (keep the commas!), `STRAT_INFO` (tooltip) and `BADGE_COLORS`, and add its deduction to the right AGI bucket (`retDed` / `bizDed` / `otherAdj`) if it reduces AGI.
-4. Update the row-count checks in the test (`17`).
+4. Update the row-count checks in the test (`18`).
 
 ### Share or deploy to the sales team
 - Easiest: send the HTML file. It works offline except Excel export, which loads SheetJS from cdnjs.

@@ -17,24 +17,24 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(--gray4);min-height:100vh;}
 .ticker{background:var(--navy);height:38px;display:flex;align-items:center;justify-content:center;gap:28px;position:sticky;top:56px;z-index:90;box-shadow:0 2px 8px rgba(0,0,0,.25);}
-.ticker-item{display:flex;align-items:center;gap:8px;font-size:11px;}
+.ticker-item{display:flex;align-items:center;gap:8px;font-size:13px;}
 .ticker-label{color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.04em;text-transform:uppercase;}
-.ticker-val{color:var(--gold);font-weight:800;font-size:13px;}
+.ticker-val{color:var(--gold);font-weight:800;font-size:14px;}
 .ticker-sep{width:1px;height:20px;background:rgba(255,255,255,.15);}
 .topbar{background:var(--navy);padding:0 28px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.3);}
 .topbar-brand{display:flex;align-items:center;gap:12px;}
-.topbar-logo{width:34px;height:34px;background:var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;color:var(--white);}
-.topbar-name{font-weight:800;font-size:16px;letter-spacing:.04em;}
-.topbar-sub{color:rgba(255,255,255,.45);font-size:10px;letter-spacing:.06em;margin-top:1px;}
+.topbar-logo{width:34px;height:34px;background:var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:var(--white);}
+.topbar-name{font-weight:800;font-size:17px;letter-spacing:.04em;}
+.topbar-sub{color:rgba(255,255,255,.45);font-size:12px;letter-spacing:.06em;margin-top:1px;}
 .topbar-right{display:flex;gap:10px;align-items:center;}
-.btn-dl{background:var(--gold);color:var(--white);border:none;border-radius:8px;padding:9px 20px;font-weight:700;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:7px;transition:all .2s;}
+.btn-dl{background:var(--gold);color:var(--white);border:none;border-radius:8px;padding:9px 20px;font-weight:700;font-size:14px;cursor:pointer;display:flex;align-items:center;gap:7px;transition:all .2s;}
 .btn-dl:hover{background:var(--gold-d);transform:translateY(-1px);}
 .btn-dl:disabled{opacity:.5;cursor:not-allowed;transform:none;}
-.btn-preview{background:transparent;color:rgba(255,255,255,.8);border:1.5px solid rgba(255,255,255,.25);border-radius:8px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;}
+.btn-preview{background:transparent;color:rgba(255,255,255,.8);border:1.5px solid rgba(255,255,255,.25);border-radius:8px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;}
 .btn-preview:hover{border-color:var(--gold);color:var(--gold);}
 .main{max-width:1100px;margin:0 auto;padding:24px 20px 80px;}
 .tabs{display:flex;gap:3px;margin-bottom:22px;background:var(--navy);border-radius:var(--r);padding:4px;}
-.tab{flex:1;padding:9px 4px;border:none;border-radius:7px;background:transparent;color:rgba(255,255,255,.5);font-weight:600;font-size:10px;cursor:pointer;transition:all .2s;text-align:center;}
+.tab{flex:1;padding:9px 4px;border:none;border-radius:7px;background:transparent;color:rgba(255,255,255,.5);font-weight:600;font-size:12px;cursor:pointer;transition:all .2s;text-align:center;}
 .tab.active{background:var(--gold);color:var(--white);}
 .tab:hover:not(.active){color:var(--white);background:rgba(255,255,255,.08);}
 .tab-content{display:none;}
@@ -43,12 +43,12 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
 .card-hdr{background:var(--navy);padding:13px 20px;display:flex;align-items:center;gap:12px;}
 .card-hdr.gold{background:linear-gradient(135deg,var(--gold-d),var(--gold));}
 .card-hdr.indigo{background:var(--indigo);}
-.card-num{width:26px;height:26px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:var(--white);flex-shrink:0;}
+.card-num{width:26px;height:26px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:var(--white);flex-shrink:0;}
 .card-hdr.gold .card-num{background:var(--navy);color:var(--white);}
-.card-title{color:var(--white);font-weight:700;font-size:13px;}
+.card-title{color:var(--white);font-weight:700;font-size:14px;}
 .card-body{padding:20px;}
 .strat-savings-box{background:var(--green-l);border:1.5px solid var(--green);border-radius:8px;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
-.strat-savings-box .lbl{font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.05em;}
+.strat-savings-box .lbl{font-size:12px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.05em;}
 .strat-savings-box .val{font-size:18px;font-weight:800;color:var(--green);}
 .strat-savings-box.na{background:var(--gray1);border-color:var(--gray2);}
 .strat-savings-box.na .lbl,.strat-savings-box.na .val{color:var(--gray3);}
@@ -58,57 +58,58 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
 .full{grid-column:1/-1;}
 @media(max-width:640px){.grid2,.grid3,.grid4{grid-template-columns:1fr;}}
 .field{display:flex;flex-direction:column;gap:5px;}
-.field label{font-size:10px;font-weight:700;color:var(--navy);letter-spacing:.04em;text-transform:uppercase;}
-.field input,.field select{border:1.5px solid var(--gray2);border-radius:7px;padding:8px 11px;font-family:inherit;font-size:13px;color:var(--gray4);background:var(--blue-in);outline:none;width:100%;transition:border-color .15s,box-shadow .15s;}
+.field label{font-size:12px;font-weight:700;color:var(--navy);letter-spacing:.04em;text-transform:uppercase;}
+.field input,.field select{border:1.5px solid var(--gray2);border-radius:7px;padding:8px 11px;font-family:inherit;font-size:14px;color:var(--gray4);background:var(--blue-in);outline:none;width:100%;transition:border-color .15s,box-shadow .15s;}
 .field input:focus,.field select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(250,95,17,.12);background:var(--white);}
 .field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a96a8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;padding-right:30px;}
 .field .calc{background:var(--green-l);border-color:var(--green);color:var(--green);font-weight:700;}
-.calc-disp{background:var(--green-l);border:1.5px solid var(--green);border-radius:7px;padding:8px 11px;font-size:13px;font-weight:700;color:var(--green);min-height:36px;display:flex;align-items:center;}
+.calc-disp{background:var(--green-l);border:1.5px solid var(--green);border-radius:7px;padding:8px 11px;font-size:14px;font-weight:700;color:var(--green);min-height:36px;display:flex;align-items:center;}
 .divider{height:1px;background:var(--gray2);margin:16px 0;}
-.sub-hdr{font-size:10px;font-weight:700;color:var(--navy2);text-transform:uppercase;letter-spacing:.07em;margin:12px 0 9px;}
-.note-box{background:var(--gold-l);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:9px 13px;font-size:11px;color:#8a3008;margin:10px 0;}
-.info-box{background:var(--cyan-l);border-left:3px solid var(--navy2);border-radius:0 6px 6px 0;padding:9px 13px;font-size:11px;color:var(--navy);margin:10px 0;}
+.sub-hdr{font-size:12px;font-weight:700;color:var(--navy2);text-transform:uppercase;letter-spacing:.07em;margin:12px 0 9px;}
+.note-box{background:var(--gold-l);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:9px 13px;font-size:13px;color:#8a3008;margin:10px 0;}
+.info-box{background:var(--cyan-l);border-left:3px solid var(--navy2);border-radius:0 6px 6px 0;padding:9px 13px;font-size:13px;color:var(--navy);margin:10px 0;}
 .hidden{display:none!important;}
 .biz-block{background:var(--gray1);border-radius:8px;padding:15px;margin-top:10px;border:1px solid var(--gray2);}
-.btn-add{background:var(--navy);color:var(--white);border:none;border-radius:7px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;margin-top:10px;display:flex;align-items:center;gap:6px;transition:background .2s;}
+.btn-add{background:var(--navy);color:var(--white);border:none;border-radius:7px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;margin-top:10px;display:flex;align-items:center;gap:6px;transition:background .2s;}
 .btn-add:hover{background:var(--navy2);}
-.btn-remove{background:var(--red-l);color:var(--red);border:1px solid #f5c0c0;border-radius:5px;padding:3px 10px;font-size:11px;font-weight:600;cursor:pointer;}
-.rd-check{display:flex;align-items:flex-start;gap:9px;background:var(--gray1);border:1.5px solid var(--gray2);border-radius:7px;padding:9px 12px;cursor:pointer;font-size:12px;color:var(--gray4);transition:all .15s;line-height:1.4;}
+.btn-remove{background:var(--red-l);color:var(--red);border:1px solid #f5c0c0;border-radius:5px;padding:3px 10px;font-size:13px;font-weight:600;cursor:pointer;}
+.rd-check{display:flex;align-items:flex-start;gap:9px;background:var(--gray1);border:1.5px solid var(--gray2);border-radius:7px;padding:9px 12px;cursor:pointer;font-size:13px;color:var(--gray4);transition:all .15s;line-height:1.4;}
 .rd-check:hover{border-color:var(--gold);background:var(--gold-l);}
 .rd-check input[type="checkbox"]{width:15px;height:15px;accent-color:var(--navy);flex-shrink:0;margin-top:1px;}
 .rd-check:has(input:checked){border-color:var(--navy);background:var(--blue-in);}
 /* collapsible section */
 .collapsible-hdr{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:10px 14px;background:var(--gray1);border-radius:8px;border:1.5px solid var(--gray2);margin-bottom:6px;user-select:none;}
 .collapsible-hdr:hover{border-color:var(--navy2);}
-.collapsible-hdr .ch-title{font-size:11px;font-weight:700;color:var(--navy);}
-.collapsible-hdr .ch-arrow{font-size:11px;color:var(--gray3);transition:transform .2s;}
+.collapsible-hdr .ch-title{font-size:13px;font-weight:700;color:var(--navy);}
+.opt-tag{display:inline-block;margin-left:8px;padding:1px 8px;border-radius:10px;background:var(--gray2);color:var(--gray4);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;vertical-align:middle;}
+.collapsible-hdr .ch-arrow{font-size:13px;color:var(--gray3);transition:transform .2s;}
 .collapsible-hdr.open .ch-arrow{transform:rotate(180deg);}
 .collapsible-body{display:none;padding:12px 0 4px;}
 .collapsible-body.open{display:block;}
 /* back button */
 .nav-btn-row{display:flex;justify-content:space-between;margin-top:20px;padding-top:16px;border-top:1px solid var(--gray2);}
-.btn-back{background:transparent;color:var(--navy2);border:1.5px solid var(--navy2);border-radius:8px;padding:11px 24px;font-weight:700;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-back{background:transparent;color:var(--navy2);border:1.5px solid var(--navy2);border-radius:8px;padding:11px 24px;font-weight:700;font-size:14px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s;}
 .btn-back:hover{background:var(--cyan-l);}
-.btn-next{background:var(--gold);color:var(--white);border:none;border-radius:8px;padding:11px 28px;font-weight:700;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s;box-shadow:0 3px 12px rgba(250,95,17,.3);}
+.btn-next{background:var(--gold);color:var(--white);border:none;border-radius:8px;padding:11px 28px;font-weight:700;font-size:14px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s;box-shadow:0 3px 12px rgba(250,95,17,.3);}
 .btn-next:hover{background:var(--gold-d);transform:translateY(-1px);}
 /* strategy info tooltip */
-.strat-info-btn{background:var(--cyan-l);border:1px solid var(--cyan);border-radius:50%;width:18px;height:18px;font-size:9px;font-weight:800;color:var(--navy2);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;margin-left:6px;flex-shrink:0;vertical-align:middle;}
+.strat-info-btn{background:var(--cyan-l);border:1px solid var(--cyan);border-radius:50%;width:18px;height:18px;font-size:11px;font-weight:800;color:var(--navy2);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;margin-left:6px;flex-shrink:0;vertical-align:middle;}
 .strat-info-btn:hover{background:var(--navy2);color:white;}
 .strat-tooltip{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--navy);color:white;border-radius:12px;padding:20px 24px;max-width:400px;width:90vw;z-index:999;box-shadow:0 8px 40px rgba(3,4,94,.35);}
 .strat-tooltip.open{display:block;}
 .strat-tooltip-overlay{display:none;position:fixed;inset:0;background:rgba(3,4,94,.45);z-index:998;}
 .strat-tooltip-overlay.open{display:block;}
-.strat-tooltip-title{font-size:15px;font-weight:800;color:var(--gold);margin-bottom:8px;}
-.strat-tooltip-body{font-size:13px;color:rgba(255,255,255,.8);line-height:1.7;}
-.strat-tooltip-close{margin-top:14px;background:var(--gold);border:none;border-radius:7px;padding:8px 18px;font-weight:700;font-size:12px;color:var(--white);cursor:pointer;}
+.strat-tooltip-title{font-size:16px;font-weight:800;color:var(--gold);margin-bottom:8px;}
+.strat-tooltip-body{font-size:14px;color:rgba(255,255,255,.8);line-height:1.7;}
+.strat-tooltip-close{margin-top:14px;background:var(--gold);border:none;border-radius:7px;padding:8px 18px;font-weight:700;font-size:13px;color:var(--white);cursor:pointer;}
 /* Master summary bar */
 .master-bar{background:var(--navy);border-radius:var(--r);padding:18px 22px;margin-bottom:18px;}
-.master-bar-title{font-size:9px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;}
+.master-bar-title{font-size:11px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;}
 .master-bar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:12px;}
 .master-bar-grid2{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 .mb-item{text-align:center;}
 .mb-item+.mb-item{border-left:1px solid rgba(255,255,255,.1);}
-.mb-label{font-size:8px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
+.mb-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;}
 .mb-val{font-size:17px;font-weight:800;color:var(--gold);}
 .mb-val.white{color:white;}
 .mb-sep{height:1px;background:rgba(255,255,255,.1);margin:12px 0;}
@@ -118,43 +119,43 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
 .preview-box{background:var(--white);border-radius:var(--r);box-shadow:var(--sh-lg);border:2px solid var(--navy);overflow:hidden;margin-top:20px;}
 .preview-hdr{background:var(--navy);padding:24px 28px 20px;text-align:center;border-bottom:3px solid var(--gold);}
 .preview-brand{font-size:24px;font-weight:900;letter-spacing:.06em;}
-.preview-subtitle{color:rgba(255,255,255,.55);font-size:11px;margin-top:5px;}
+.preview-subtitle{color:rgba(255,255,255,.55);font-size:13px;margin-top:5px;}
 .preview-body{padding:24px;}
 .pv-section{margin-bottom:20px;}
-.pv-section-title{font-size:10px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;padding-bottom:5px;border-bottom:2px solid var(--gold);}
+.pv-section-title{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;padding-bottom:5px;border-bottom:2px solid var(--gold);}
 .income-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
 .income-box{background:var(--gray1);border-radius:8px;padding:12px;text-align:center;}
-.income-box .ib-label{font-size:9px;font-weight:700;color:var(--gray3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
-.income-box .ib-val{font-size:16px;font-weight:800;color:var(--navy);}
+.income-box .ib-label{font-size:11px;font-weight:700;color:var(--gray3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
+.income-box .ib-val{font-size:17px;font-weight:800;color:var(--navy);}
 .big-numbers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:18px;}
 .big-num-box{border-radius:10px;padding:16px;text-align:center;}
 .big-num-box.green{background:var(--green-l);border:2px solid var(--green);}
 .big-num-box.blue{background:var(--cyan-l);border:2px solid var(--navy2);}
 .big-num-box.gold{background:var(--gold-l);border:2px solid var(--gold);}
-.big-num-label{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray3);margin-bottom:5px;}
+.big-num-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray3);margin-bottom:5px;}
 .big-num-val{font-size:22px;font-weight:800;}
 .big-num-box.green .big-num-val{color:var(--green);}
 .big-num-box.blue .big-num-val{color:var(--navy);}
 .big-num-box.gold .big-num-val{color:var(--gold-d);}
-.disc-box{background:var(--red-l);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:10px 13px;font-size:10px;color:var(--red);line-height:1.5;margin-top:16px;}
-.toast{position:fixed;bottom:24px;right:24px;background:var(--green);color:white;padding:12px 20px;border-radius:8px;font-size:13px;font-weight:600;box-shadow:var(--sh-lg);transform:translateY(80px);opacity:0;transition:all .3s cubic-bezier(.34,1.56,.64,1);z-index:999;}
+.disc-box{background:var(--red-l);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:10px 13px;font-size:12px;color:var(--red);line-height:1.5;margin-top:16px;}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--green);color:white;padding:12px 20px;border-radius:8px;font-size:14px;font-weight:600;box-shadow:var(--sh-lg);transform:translateY(80px);opacity:0;transition:all .3s cubic-bezier(.34,1.56,.64,1);z-index:999;}
 .toast.show{transform:translateY(0);opacity:1;}
 /* AGI summary bar */
 .agi-bar{background:var(--navy);border-radius:8px;padding:14px 18px;margin:14px 0;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
 .agi-item{text-align:center;}
 .agi-item+.agi-item{border-left:1px solid rgba(255,255,255,.12);}
-.agi-label{font-size:8px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
-.agi-val{font-size:13px;font-weight:800;color:var(--gold);}
+.agi-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
+.agi-val{font-size:14px;font-weight:800;color:var(--gold);}
 .agi-val.white{color:white;}
 .agi-val.red{color:#ff8080;}
 .agi-val.green{color:#7de8a0;}
 .waterfall-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;}
-.warn-box{background:var(--red-l);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:9px 13px;font-size:11px;color:var(--red);margin:10px 0;line-height:1.5;}
-.ok-box{background:var(--green-l);border-left:3px solid var(--green);border-radius:0 6px 6px 0;padding:9px 13px;font-size:11px;color:var(--green);margin:10px 0;}
-.field-hint{font-size:10px;color:var(--gray3);line-height:1.4;}
+.warn-box{background:var(--red-l);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:9px 13px;font-size:13px;color:var(--red);margin:10px 0;line-height:1.5;}
+.ok-box{background:var(--green-l);border-left:3px solid var(--green);border-radius:0 6px 6px 0;padding:9px 13px;font-size:13px;color:var(--green);margin:10px 0;}
+.field-hint{font-size:12px;color:var(--gray3);line-height:1.4;}
 .field-hint.warn{color:var(--red);font-weight:600;}
-.pv-table{width:100%;border-collapse:collapse;font-size:12px;}
-.pv-table th{background:var(--navy);color:#fff;padding:8px 10px;text-align:left;font-size:9px;letter-spacing:.05em;text-transform:uppercase;}
+.pv-table{width:100%;border-collapse:collapse;font-size:13px;}
+.pv-table th{background:var(--navy);color:#fff;padding:8px 10px;text-align:left;font-size:11px;letter-spacing:.05em;text-transform:uppercase;}
 .pv-table td{padding:8px 10px;border-bottom:1px solid var(--gray2);}
 .pv-table td.num,.pv-table th.num{text-align:right;}
 .pv-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:14px;}
@@ -172,8 +173,8 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
 @media(max-width:640px){
   .topbar{padding:0 16px;}
   .topbar-sub{display:none;}
-  .btn-preview{padding:7px 10px;font-size:11px;}
-  .btn-dl{padding:8px 12px;font-size:12px;}
+  .btn-preview{padding:7px 10px;font-size:13px;}
+  .btn-dl{padding:8px 12px;font-size:13px;}
   .main{padding:16px 16px 80px;}
   .income-grid,.big-numbers{grid-template-columns:1fr;}
   .waterfall-grid,.agi-bar{grid-template-columns:repeat(2,1fr);}
@@ -257,7 +258,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
           <option value="24">24%</option><option value="22">22%</option><option value="12">12%</option><option value="10">10%</option>
         </select><div id="fed_rate_hint" class="field-hint"></div></div>
       <div class="field"><label>Combined Tax Rate (Auto)</label>
-        <div id="combined_rate" style="background:var(--green-l);border:1.5px solid var(--green);border-radius:7px;padding:8px 11px;font-size:14px;font-weight:800;color:var(--green);min-height:38px;display:flex;align-items:center;">—</div>
+        <div id="combined_rate" style="background:var(--green-l);border:1.5px solid var(--green);border-radius:7px;padding:8px 11px;font-size:15px;font-weight:800;color:var(--green);min-height:38px;display:flex;align-items:center;">—</div>
       </div>
     </div>
     <div class="divider"></div>
@@ -293,18 +294,23 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
       <div class="field"><label>Spouse W-2 Income 2025 ($)</label><input type="number" id="w2_sp" placeholder="0" onchange="autoProject();recalc()"></div>
       <div class="field full"><label>Total W-2 Income 2025 (Auto)</label><div id="w2_total" class="calc-disp">—</div></div>
     </div>
-    <div class="sub-hdr">2026 Projected <span style="font-weight:400;color:var(--gray3);font-size:9px;text-transform:none">(auto-copied from 2025 — override if different)</span></div>
+    <div class="sub-hdr">2026 Projected <span style="font-weight:400;color:var(--gray3);font-size:11px;text-transform:none">(auto-copied from 2025 — override if different)</span></div>
     <div class="grid2">
       <div class="field"><label>TP W-2 — 2026 Projected ($)</label><input type="number" id="w2_tp_26" placeholder="0" onchange="recalc()"></div>
       <div class="field"><label>Spouse W-2 — 2026 Projected ($)</label><input type="number" id="w2_sp_26" placeholder="0" onchange="recalc()"></div>
       <div class="field full"><label>Total W-2 Income 2026 Projected (Auto)</label><div id="w2_total_26" class="calc-disp">—</div></div>
     </div>
     <div class="divider"></div>
-    <div class="sub-hdr">Other Income <span style="font-weight:400;color:var(--gray3);font-size:9px;text-transform:none">(optional — fill only what applies)</span></div>
-    <div class="grid3">
-      <div class="field"><label>Passive Income (Rental, K-1, etc.) ($)</label><input type="number" id="passive_inc" placeholder="Optional" onchange="recalc()"></div>
-      <div class="field"><label>Interest / Dividend Income ($)</label><input type="number" id="div_int" placeholder="Optional" onchange="recalc()"></div>
-      <div class="field"><label>Other Income ($)</label><input type="number" id="other_inc" placeholder="Optional" onchange="recalc()"></div>
+    <div class="collapsible-hdr" onclick="toggleCollapsible('other-inc-body',this)">
+      <span class="ch-title">➕ Other Income — Optional drill-down <span class="opt-tag">Sales rep can skip</span></span>
+      <span class="ch-arrow">▼</span>
+    </div>
+    <div class="collapsible-body" id="other-inc-body">
+      <div class="grid3">
+        <div class="field"><label>Passive Income (Rental, K-1, etc.) ($)</label><input type="number" id="passive_inc" placeholder="Optional" onchange="recalc()"></div>
+        <div class="field"><label>Interest / Dividend Income ($)</label><input type="number" id="div_int" placeholder="Optional" onchange="recalc()"></div>
+        <div class="field"><label>Other Income ($)</label><input type="number" id="other_inc" placeholder="Optional" onchange="recalc()"></div>
+      </div>
     </div>
     <div class="field" style="max-width:340px"><label>Estimated Gross Income (Auto)</label><div id="gross_inc" class="calc-disp">—</div></div>
     <div class="divider"></div>
@@ -320,7 +326,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
           <option value="custom">Custom Amount</option>
         </select></div>
       <div class="field"><label>TP 401(k) Amount ($) <span style="font-weight:400;color:var(--gray3)">(editable)</span></label><input type="number" id="k401_amt" placeholder="0" onchange="recalc()"></div>
-      <div class="field"><label>Est. Tax Savings — TP 401(k) (Auto)</label><div id="k401_tp_sav" class="calc-disp">—</div></div>
+      <div class="field"><label>TP Unused 401(k) Room → Est. Tax Savings (Auto)</label><div id="k401_tp_sav" class="calc-disp">—</div></div>
     </div>
 
     <!-- Spouse 401k -->
@@ -333,8 +339,9 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
           <option value="custom">Custom Amount</option>
         </select></div>
       <div class="field"><label>Spouse 401(k) Amount ($) <span style="font-weight:400;color:var(--gray3)">(editable)</span></label><input type="number" id="k401_sp" placeholder="0" onchange="recalc()"></div>
-      <div class="field"><label>Est. Tax Savings — Spouse 401(k) (Auto)</label><div id="k401_sp_sav" class="calc-disp">—</div></div>
+      <div class="field"><label>Spouse Unused 401(k) Room → Est. Tax Savings (Auto)</label><div id="k401_sp_sav" class="calc-disp">—</div></div>
     </div>
+    <div class="info-box">ℹ️ What the client already contributes is <strong>not</strong> counted as savings from AG FinTax. Only the <strong>unused room</strong> (the $24,500 limit minus current contributions, up to W-2 pay) counts, as the "Maximize 401(k)" strategy.</div>
 
     <!-- IRA -->
     <div class="grid2">
@@ -400,14 +407,14 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
   <div class="card-hdr"><div class="card-num">S</div><div class="card-title">S-Corp Election Strategy</div></div>
   <div class="card-body">
     <div id="scorp-savings-badge" class="strat-savings-box na">
-      <div><div class="lbl">S-Corp Est. Annual SE Tax Savings</div><div style="font-size:10px;color:var(--gray3);margin-top:2px">Eligible: Schedule C / single-member LLC profit &gt; $40,000 (2026 projected)</div></div>
+      <div><div class="lbl">S-Corp Est. Annual SE Tax Savings</div><div style="font-size:12px;color:var(--gray3);margin-top:2px">Eligible: Schedule C / single-member LLC profit &gt; $40,000 (2026 projected)</div></div>
       <div class="val" id="scorp-sav-display">—</div>
     </div>
     <div id="scorp-detail" style="display:none">
       <div class="grid3">
         <div class="field"><label>Reasonable Owner Salary — default 25% of Net Profit (editable)</label><input type="number" id="scorp_salary" placeholder="0" onchange="recalc()"></div>
         <div class="field"><label>Profit Above Salary (Auto)</label><div id="scorp_above_sal" class="calc-disp">—</div></div>
-        <div class="field"><label>SE Tax Rate</label><input type="text" value="15.3% on 92.35% of profit (SS $184,500 cap + 2.9% Medicare)" readonly style="background:var(--gray1);border-color:var(--gray2);font-size:11px;"></div>
+        <div class="field"><label>SE Tax Rate</label><input type="text" value="15.3% on 92.35% of profit (SS $184,500 cap + 2.9% Medicare)" readonly style="background:var(--gray1);border-color:var(--gray2);font-size:13px;"></div>
         <div class="field"><label>SE Tax as Sole Prop (Auto)</label><div id="scorp_se_current" class="calc-disp">—</div></div>
         <div class="field"><label>FICA on Salary Only — S-Corp (Auto)</label><div id="scorp_fica_sal" class="calc-disp">—</div></div>
         <div class="field"><label>Est. Annual SE Tax Savings (Auto)</label><div id="scorp_sav_detail" class="calc-disp">—</div></div>
@@ -423,7 +430,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
   <div class="card-hdr"><div class="card-num">R</div><div class="card-title">Solo 401(k) / SEP-IRA Strategy</div></div>
   <div class="card-body">
     <div id="solo401k-badge" class="strat-savings-box na">
-      <div><div class="lbl">Solo 401(k) / SEP-IRA Est. Tax Savings</div><div style="font-size:10px;color:var(--gray3);margin-top:2px">Requires: self-employment income + NO non-family W-2 employees</div></div>
+      <div><div class="lbl">Solo 401(k) / SEP-IRA Est. Tax Savings</div><div style="font-size:12px;color:var(--gray3);margin-top:2px">Requires: self-employment income + NO non-family W-2 employees</div></div>
       <div class="val" id="solo401k-sav-display">—</div>
     </div>
     <div id="solo401k-detail" style="display:none">
@@ -525,7 +532,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
 
     <!-- SEHI -->
     <div class="sub-hdr">Self-Employed Health Insurance (SEHI)</div>
-    <div id="sehi-badge" class="strat-savings-box na"><div><div class="lbl">SEHI Est. Tax Savings</div><div style="font-size:10px;color:var(--gray3)">Premiums paid by business — not on W-2</div></div><div class="val" id="sehi-sav-display">—</div></div>
+    <div id="sehi-badge" class="strat-savings-box na"><div><div class="lbl">SEHI Est. Tax Savings</div><div style="font-size:12px;color:var(--gray3)">Premiums paid by business — not on W-2</div></div><div class="val" id="sehi-sav-display">—</div></div>
     <div class="grid2">
       <div class="field"><label>Is health insurance paid from the business?</label>
         <select id="health_from_biz" onchange="toggleSEHI()"><option value="No">No</option><option value="Yes">Yes</option></select></div>
@@ -544,7 +551,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
 
     <!-- HSA -->
     <div class="sub-hdr">Health Savings Account (HSA)</div>
-    <div id="hsa-badge" class="strat-savings-box na"><div><div class="lbl">HSA Est. Tax Savings</div><div style="font-size:10px;color:var(--gray3)">Triple tax-advantaged — 2026 family max: $8,750</div></div><div class="val" id="hsa-sav-display">—</div></div>
+    <div id="hsa-badge" class="strat-savings-box na"><div><div class="lbl">HSA Est. Tax Savings</div><div style="font-size:12px;color:var(--gray3)">Triple tax-advantaged — 2026 family max: $8,750</div></div><div class="val" id="hsa-sav-display">—</div></div>
     <div class="grid2">
       <div class="field"><label>HSA Eligible (High-Deductible Health Plan)?</label>
         <select id="hsa_elig" onchange="recalc()"><option value="No">No</option><option value="Yes">Yes</option></select></div>
@@ -575,7 +582,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
 
     <!-- AUGUSTA -->
     <div class="sub-hdr">Augusta Strategy (IRC §280A(g))</div>
-    <div id="aug-badge" class="strat-savings-box na"><div><div class="lbl">Augusta Strategy Est. Tax Savings</div><div style="font-size:10px;color:var(--gray3)">Rent home to business ≤14 days/year — rental income is tax-free</div></div><div class="val" id="aug-sav-display">—</div></div>
+    <div id="aug-badge" class="strat-savings-box na"><div><div class="lbl">Augusta Strategy Est. Tax Savings</div><div style="font-size:12px;color:var(--gray3)">Rent home to business ≤14 days/year — rental income is tax-free</div></div><div class="val" id="aug-sav-display">—</div></div>
     <div class="collapsible-hdr" onclick="toggleCollapsible('aug-body',this)">
       <span class="ch-title">🏠 Augusta Strategy Details (click to expand — optional)</span>
       <span class="ch-arrow">▼</span>
@@ -621,7 +628,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
       <div id="costseg_note" class="info-box" style="display:none"></div>
     </div>
     <div class="divider"></div>
-    <div class="sub-hdr">R&D / Innovation (Business) <span style="font-weight:400;color:var(--gray3);font-size:9px">— applies to any business type, not just real estate</span></div>
+    <div class="sub-hdr">R&D / Innovation (Business) <span style="font-weight:400;color:var(--gray3);font-size:11px">— applies to any business type, not just real estate</span></div>
     <div class="grid2">
       <div class="field full"><label>Does any business involve R&D / innovation work?</label>
         <select id="re_dev" onchange="toggleRD()"><option value="">— Select —</option><option value="No">No</option><option value="Yes">Yes</option></select></div>
@@ -643,7 +650,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
         <label class="rd-check"><input type="checkbox" id="rd_clinical" onchange="evalRD()"> Clinical protocol / medical device development</label>
         <label class="rd-check"><input type="checkbox" id="rd_ai" onchange="evalRD()"> AI / ML / data modeling for business use</label>
       </div>
-      <div id="rd_result" style="display:none;padding:12px 16px;border-radius:8px;font-weight:700;font-size:13px;"></div>
+      <div id="rd_result" style="display:none;padding:12px 16px;border-radius:8px;font-weight:700;font-size:14px;"></div>
       <div class="grid2" id="rd_amt_row" style="display:none;margin-top:12px">
         <div class="field"><label>Est. R&D Tax Credit Amount ($)</label><input type="number" id="rd_amt" placeholder="0" onchange="recalc()"></div>
         <div class="field"><label>Est. Tax Savings — R&D Credit (dollar-for-dollar)</label><div id="rd_tax_sav" class="calc-disp">—</div></div>
@@ -671,16 +678,24 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
     <div class="grid2">
       <div class="field"><label>Capital Gains — Short Term ($) <span style="font-weight:400;color:var(--gray3)">taxed as ordinary income</span></label><input type="number" id="cg_st" placeholder="0" onchange="recalc()"></div>
       <div class="field"><label>Capital Gains — Long Term ($) <span style="font-weight:400;color:var(--gray3)">0 / 15 / 20% + 3.8% NIIT</span></label><input type="number" id="cg_lt" placeholder="0" onchange="recalc()"></div>
-      <div class="field"><label>Estimated Unrealized Gains (current holdings) ($)</label><input type="number" id="cg_unrealized" placeholder="Optional" onchange="recalc()"></div>
-      <div class="field"><label>Any positions with unrealized LOSSES?</label>
-        <select id="has_losses" onchange="recalc()"><option value="No">No</option><option value="Yes">Yes</option></select></div>
-      <div class="field"><label>Est. Unrealized Loss Amount — for harvesting ($)</label><input type="number" id="loss_harvest_amt" placeholder="0" onchange="recalc()"></div>
     </div>
-    <div id="tlh-badge" class="strat-savings-box na">
-      <div><div class="lbl">Tax Loss Harvesting Est. Tax Savings</div><div style="font-size:10px;color:var(--gray3)">Offset capital gains with harvested losses</div></div>
-      <div class="val" id="tlh-sav-display">—</div>
+    <div class="collapsible-hdr" onclick="toggleCollapsible('tlh-body',this)">
+      <span class="ch-title">➕ Unrealized Gains / Losses &amp; Tax-Loss Harvesting — Optional drill-down <span class="opt-tag">Sales rep can skip</span></span>
+      <span class="ch-arrow">▼</span>
     </div>
-    <div id="tlh_detail" class="field-hint" style="margin:-6px 0 8px"></div>
+    <div class="collapsible-body" id="tlh-body">
+      <div class="grid2">
+        <div class="field"><label>Estimated Unrealized Gains (current holdings) ($)</label><input type="number" id="cg_unrealized" placeholder="Optional" onchange="recalc()"></div>
+        <div class="field"><label>Any positions with unrealized LOSSES?</label>
+          <select id="has_losses" onchange="recalc()"><option value="No">No</option><option value="Yes">Yes</option></select></div>
+        <div class="field"><label>Est. Unrealized Loss Amount — for harvesting ($)</label><input type="number" id="loss_harvest_amt" placeholder="0" onchange="recalc()"></div>
+      </div>
+      <div id="tlh-badge" class="strat-savings-box na">
+        <div><div class="lbl">Tax Loss Harvesting Est. Tax Savings</div><div style="font-size:12px;color:var(--gray3)">Offset capital gains with harvested losses</div></div>
+        <div class="val" id="tlh-sav-display">—</div>
+      </div>
+      <div id="tlh_detail" class="field-hint" style="margin:-6px 0 8px"></div>
+    </div>
     <div class="divider"></div>
     <div class="sub-hdr">Real Estate Capital Gains</div>
     <div class="grid2">
@@ -692,12 +707,12 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
     <div class="divider"></div>
     <div class="sub-hdr">Opportunity Zone Investment Strategy</div>
     <div id="oz-badge" class="strat-savings-box na">
-      <div><div class="lbl">Opportunity Zone Est. Tax Benefit</div><div style="font-size:10px;color:var(--gray3)">Defer & potentially eliminate CG tax — invest within 180 days of gain event</div></div>
+      <div><div class="lbl">Opportunity Zone Est. Tax Benefit</div><div style="font-size:12px;color:var(--gray3)">Defer & potentially eliminate CG tax — invest within 180 days of gain event</div></div>
       <div class="val" id="oz-sav-display">—</div>
     </div>
     <div id="oz-detail" style="display:none">
       <div class="grid2">
-        <div class="field"><label>Capital Gains to Invest in QOZ Fund ($)</label><input type="number" id="oz_cg_amt" placeholder="0" onchange="recalc()"><div id="oz_hint" class="field-hint"></div></div>
+        <div class="field"><label>Capital Gains to Invest in QOZ Fund ($) <span style="font-weight:400;color:var(--gray3)">(default: 25% of short-term gains — editable)</span></label><input type="number" id="oz_cg_amt" placeholder="0" oninput="markManual(this)"><div id="oz_hint" class="field-hint"></div></div>
         <div class="field"><label>Est. Deferred Tax Benefit (Auto)</label><div id="oz_deferred_tax" class="calc-disp">—</div></div>
       </div>
       <div class="note-box">📌 <strong>QOZ Funds:</strong> Invest CG proceeds within 180 days. Defer original gain tax; hold 10+ years → ALL appreciation in the QOZ fund is TAX-FREE. Applies to both stock and real estate gains. The figure shown is tax <strong>deferred</strong>, not eliminated.</div>
@@ -721,7 +736,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
     <div style="background:var(--gray1);border-radius:8px;padding:15px;margin-bottom:12px;border:1px solid var(--gray2)">
       <div class="sub-hdr" style="margin-top:0">Investment 1</div>
       <div class="grid2">
-        <div class="field"><label>Investment Amount ($)</label><input type="number" id="mcg_inv" placeholder="0" onchange="recalc()"></div>
+        <div class="field"><label>Investment Amount ($) <span style="font-weight:400;color:var(--gray3)">(default: $50k if income &lt; $500k, else $100k — editable)</span></label><input type="number" id="mcg_inv" placeholder="0" oninput="markManual(this)"></div>
         <div class="field"><label>Strategy / Offering</label>
           <select id="mcg_fund" onchange="setMultiple()">
             <option value="4">Strategy A — 4× Deduction Ratio (Recommended)</option>
@@ -779,7 +794,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
 <div class="card">
   <div class="card-hdr indigo"><div class="card-num">OG</div><div class="card-title">Oil & Gas Investment</div></div>
   <div class="card-body">
-    <div id="og-badge" class="strat-savings-box na"><div><div class="lbl">Oil &amp; Gas Est. Year 1 Tax Savings</div><div style="font-size:10px;color:var(--gray3)">~85% of investment deductible in Year 1 via IDC + depletion</div></div><div class="val" id="og-sav-display">—</div></div>
+    <div id="og-badge" class="strat-savings-box na"><div><div class="lbl">Oil &amp; Gas Est. Year 1 Tax Savings</div><div style="font-size:12px;color:var(--gray3)">~85% of investment deductible in Year 1 via IDC + depletion</div></div><div class="val" id="og-sav-display">—</div></div>
     <div class="grid2">
       <div class="field"><label>Interested in Oil & Gas Investment?</label>
         <select id="og_interest" onchange="recalc()"><option value="No">No</option><option value="Yes">Yes</option></select></div>
@@ -799,9 +814,9 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
   </div>
   <div class="card-body">
     <div style="display:flex;align-items:center;gap:14px;padding:11px 15px;border-radius:8px;margin-bottom:14px;background:var(--gray1);border:1.5px solid var(--gray2)">
-      <div style="flex:1"><div style="font-size:11px;font-weight:700;color:var(--navy);margin-bottom:2px">Donation Strategy recommended for gross income ≥ $1,000,000</div>
-        <div style="font-size:12px;color:var(--gray3)">Current gross income: <strong id="donation-inc-display" style="color:var(--navy)">$0</strong></div></div>
-      <div id="don-elig-badge" style="padding:7px 14px;border-radius:6px;font-weight:800;font-size:13px;min-width:120px;text-align:center;background:var(--gray1);color:var(--gray3);border:1.5px solid var(--gray2)">—</div>
+      <div style="flex:1"><div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:2px">Donation Strategy recommended for gross income ≥ $1,000,000</div>
+        <div style="font-size:13px;color:var(--gray3)">Current gross income: <strong id="donation-inc-display" style="color:var(--navy)">$0</strong></div></div>
+      <div id="don-elig-badge" style="padding:7px 14px;border-radius:6px;font-weight:800;font-size:14px;min-width:120px;text-align:center;background:var(--gray1);color:var(--gray3);border:1.5px solid var(--gray2)">—</div>
     </div>
     <div id="donation-active">
       <!-- AGI flow bar -->
@@ -816,8 +831,8 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
       <!-- DAF -->
       <div style="border:1.5px solid var(--gray2);border-radius:8px;overflow:hidden;margin-bottom:14px">
         <div style="background:var(--navy);padding:9px 15px;display:flex;align-items:center;gap:9px">
-          <div style="width:20px;height:20px;border-radius:50%;background:var(--gold);color:var(--white);font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">A</div>
-          <div style="color:white;font-weight:700;font-size:12px">Donor Advised Fund (DAF) — 1:1 deduction</div>
+          <div style="width:20px;height:20px;border-radius:50%;background:var(--gold);color:var(--white);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">A</div>
+          <div style="color:white;font-weight:700;font-size:13px">Donor Advised Fund (DAF) — 1:1 deduction</div>
         </div>
         <div style="padding:14px">
           <div class="grid2">
@@ -830,8 +845,8 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
       <!-- DONATION 5x -->
       <div style="border:1.5px solid var(--gray2);border-radius:8px;overflow:hidden">
         <div style="background:var(--navy);padding:9px 15px;display:flex;align-items:center;gap:9px">
-          <div style="width:20px;height:20px;border-radius:50%;background:var(--gold);color:var(--white);font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center">B</div>
-          <div style="color:white;font-weight:700;font-size:12px">Donation Strategy — 5:1 leveraged deduction</div>
+          <div style="width:20px;height:20px;border-radius:50%;background:var(--gold);color:var(--white);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">B</div>
+          <div style="color:white;font-weight:700;font-size:13px">Donation Strategy — 5:1 leveraged deduction</div>
         </div>
         <div style="padding:14px">
           <div class="grid2">
@@ -878,12 +893,12 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
     <div class="master-bar-grid2">
       <div class="mb-item"><div class="mb-label">Total Investments (Cat. 7)</div><div class="mb-val white" id="sum-total-inv">$0</div></div>
       <div class="mb-item"><div class="mb-label">Total Donations (Cat. 8)</div><div class="mb-val white" id="sum-total-don">$0</div></div>
-      <div class="mb-item"><div class="mb-label">Donation Eligible?</div><div id="sum-don-status" style="font-size:12px;font-weight:800;padding:4px 10px;border-radius:5px;display:inline-block;background:rgba(255,255,255,.1);color:rgba(255,255,255,.5)">—</div></div>
+      <div class="mb-item"><div class="mb-label">Donation Eligible?</div><div id="sum-don-status" style="font-size:13px;font-weight:800;padding:4px 10px;border-radius:5px;display:inline-block;background:rgba(255,255,255,.1);color:rgba(255,255,255,.5)">—</div></div>
       <div class="mb-item"><div class="mb-label">Savings Carryover (Yr 2)</div><div class="mb-val white" id="sum-sav-carry">$0</div></div>
     </div>
     <div class="mb-sep"></div>
     <div class="master-bar-grid2" style="margin-top:4px">
-      <div class="mb-item"><div class="mb-label">AG FinTax Fee ($)</div><input type="number" id="ag_fee" placeholder="0" onchange="recalc()" style="background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:6px;color:white;padding:5px 10px;font-size:13px;font-weight:700;width:100%;text-align:center;font-family:inherit"></div>
+      <div class="mb-item"><div class="mb-label">AG FinTax Fee ($)</div><input type="number" id="ag_fee" placeholder="0" onchange="recalc()" style="background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:6px;color:white;padding:5px 10px;font-size:14px;font-weight:700;width:100%;text-align:center;font-family:inherit"></div>
       <div class="mb-item"><div class="mb-label">Net Fee After Tax (if §162 Deductible)</div><div class="mb-val white" id="fee-after-tax">$0</div></div>
       <div class="mb-item"><div class="mb-label">Net Savings After Fee</div><div class="mb-val" id="net-sav-after-fee">$0</div></div>
       <div class="mb-item"><div class="mb-label">ROI on AG FinTax Fee</div><div class="mb-val" id="fee-roi">—</div></div>
@@ -897,15 +912,15 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
     <div class="info-box" style="margin:12px 16px 0">ℹ️ Every strategy with a calculated saving counts toward the totals unless you mark it <strong>❌ Not Applicable</strong>.</div>
     <div class="card-body" style="padding:0">
       <div style="overflow-x:auto">
-        <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
           <thead>
             <tr>
-              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:left;font-size:9px;letter-spacing:.05em;width:26px">#</th>
-              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:left;font-size:9px;letter-spacing:.05em">Strategy</th>
-              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:right;font-size:9px;letter-spacing:.05em">Deduction</th>
-              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:right;font-size:9px;letter-spacing:.05em">Est. Tax Savings</th>
-              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:center;font-size:9px;letter-spacing:.05em">Applicable?</th>
-              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:center;font-size:9px;letter-spacing:.05em">Priority</th>
+              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:left;font-size:11px;letter-spacing:.05em;width:26px">#</th>
+              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:left;font-size:11px;letter-spacing:.05em">Strategy</th>
+              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:right;font-size:11px;letter-spacing:.05em">Deduction</th>
+              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:right;font-size:11px;letter-spacing:.05em">Est. Tax Savings</th>
+              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:center;font-size:11px;letter-spacing:.05em">Applicable?</th>
+              <th style="background:var(--navy);color:white;padding:10px 12px;text-align:center;font-size:11px;letter-spacing:.05em">Priority</th>
             </tr>
           </thead>
           <tbody id="strat-tbody"></tbody>
@@ -956,17 +971,17 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cream);color:var(-
         <div style="height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-d),var(--cyan));border-radius:4px 4px 0 0"></div>
         <div style="background:var(--navy);border-radius:0 0 12px 12px;padding:24px 28px">
           <div style="text-align:center;padding:16px 0 20px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:20px">
-            <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Return on Investment in Tax Planning</div>
+            <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Return on Investment in Tax Planning</div>
             <div style="font-size:52px;font-weight:900;color:var(--gold);line-height:1;letter-spacing:-.02em" id="pv-roi">—</div>
-            <div style="font-size:12px;color:rgba(255,255,255,.5);margin-top:6px">Net Tax Savings ÷ Net AG FinTax Fee (after tax deduction)</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.5);margin-top:6px">Net Tax Savings ÷ Net AG FinTax Fee (after tax deduction)</div>
           </div>
           <div class="roi-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
-            <div style="text-align:center"><div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">AG FinTax Fee</div><div style="font-size:18px;font-weight:800;color:rgba(255,255,255,.7)" id="pv-fee">$0</div></div>
-            <div style="text-align:center;border-left:1px solid rgba(255,255,255,.1)"><div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Net Fee After Tax*</div><div style="font-size:18px;font-weight:800;color:var(--gold)" id="pv-fee-net">$0</div></div>
-            <div style="text-align:center;border-left:1px solid rgba(255,255,255,.1)"><div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Net Savings After Fee</div><div style="font-size:18px;font-weight:800;color:var(--gold)" id="pv-net-sav">$0</div></div>
-            <div style="text-align:center;border-left:1px solid rgba(255,255,255,.1)"><div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Return on Investment</div><div style="font-size:20px;font-weight:900;color:var(--gold)" id="pv-roi2">—</div></div>
+            <div style="text-align:center"><div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">AG FinTax Fee</div><div style="font-size:18px;font-weight:800;color:rgba(255,255,255,.7)" id="pv-fee">$0</div></div>
+            <div style="text-align:center;border-left:1px solid rgba(255,255,255,.1)"><div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Net Fee After Tax*</div><div style="font-size:18px;font-weight:800;color:var(--gold)" id="pv-fee-net">$0</div></div>
+            <div style="text-align:center;border-left:1px solid rgba(255,255,255,.1)"><div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Net Savings After Fee</div><div style="font-size:18px;font-weight:800;color:var(--gold)" id="pv-net-sav">$0</div></div>
+            <div style="text-align:center;border-left:1px solid rgba(255,255,255,.1)"><div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Return on Investment</div><div style="font-size:20px;font-weight:900;color:var(--gold)" id="pv-roi2">—</div></div>
           </div>
-          <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);font-size:9px;color:rgba(255,255,255,.3);line-height:1.6">* Where paid by an active business, AG FinTax fees are generally deductible under IRC §162, reducing your true out-of-pocket cost by your marginal tax rate. ROI = Net Savings ÷ Net Fee After Tax.</div>
+          <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);font-size:11px;color:rgba(255,255,255,.3);line-height:1.6">* Where paid by an active business, AG FinTax fees are generally deductible under IRC §162, reducing your true out-of-pocket cost by your marginal tax rate. ROI = Net Savings ÷ Net Fee After Tax.</div>
         </div>
       </div>
       <div class="disc-box">DISCLOSURE: This summary is for illustrative and discussion purposes only. Savings estimates are projections based on current tax law (2026) and information provided during this consultation. Actual results depend on your complete tax return, final filing status, entity elections, state law, and independent review by your CPA or tax attorney. This is not a tax opinion or guarantee of any specific tax outcome. &nbsp;|&nbsp; <strong>AG FinTax</strong> &nbsp;•&nbsp; agfintax.com &nbsp;•&nbsp; (425) 395-4318 &nbsp;•&nbsp; office@agfintax.com</div>
@@ -1009,6 +1024,8 @@ const TAX={
   luxAutoYr1Bonus:20200,         // VERIFY — 2025 figure; passenger-auto yr-1 cap with bonus
   luxAutoYr1NoBonus:12200,       // VERIFY — 2025 figure; passenger-auto yr-1 cap without bonus
   scorpMinProfit:40000,          // AG FinTax policy threshold
+  ozDefaultStPct:0.25,           // AG FinTax policy: default QOZ investment = 25% of short-term gains
+  mcgDefaultIncomeThreshold:500000, mcgDefaultLow:50000, mcgDefaultHigh:100000, // AG FinTax policy: default bonus-dep investment
   scorpSalaryPct:0.25,           // default starting point only — not an IRS rule
   ltcgRate:0.20, niitRate:0.038,
   niitThreshold:{MFJ:250000,Single:200000,HoH:200000,MFS:125000},
@@ -1036,6 +1053,7 @@ const STRAT_INFO={
   s2:{title:"Home Office Deduction",body:"If you use part of your home exclusively and regularly for your business, you can deduct that percentage of mortgage interest/rent, utilities, property taxes, and insurance. Example: 200 sq ft office in a 2,000 sq ft home = 10% of all home expenses. Requires dedicated space (a kitchen table doesn't qualify) and self-employment income. W-2 employees cannot take this deduction."},
   s3:{title:"Vehicle & Bonus Depreciation",body:"Business vehicles placed in service this year can be written off in Year 1 using Section 179 or Bonus Depreciation. SUVs/trucks over 6,000 lbs GVWR avoid the passenger-auto caps. Example: $80,000 SUV used 100% for business = $80,000 deduction = $29,600 tax savings at 37%. Passenger cars are capped at roughly $20,000 in Year 1. Business use must exceed 50%. The vehicle must be placed in service by year-end."},
   s4:{title:"Hire Children in Business",body:"If your child (age 10–17) does real work in the business, you can pay them up to $16,100/year (the 2026 standard deduction). The salary is deductible for you and tax-free for them. Children 18–24 in college can be paid more; wages above $16,100 are taxed at their low 10–12% rate. In a sole prop or parent-owned partnership, wages to children under 18 are also FICA-exempt. Must be reasonable pay for real, documented work."},
+  s18:{title:"Maximize 401(k) Contributions",body:"Whatever the client already defers into their employer 401(k) is already reducing their taxes. That is not new savings. The opportunity is the UNUSED room: the $24,500 limit (2026, plus $8,000 catch-up at 50+) minus what they contribute today, for the taxpayer and spouse. Example: contributing $10,000 → $14,500 of room × 37% = $5,365 of extra tax savings, just by raising the payroll deferral percentage. Traditional (pre-tax) deferrals only; Roth 401(k) deferrals don't reduce current tax."},
   s5:{title:"Solo 401(k) / SEP-IRA",body:"Self-employed individuals with no non-family W-2 employees can contribute up to $72,000/year (plus $8,000 catch-up at 50+) through a Solo 401(k): an employee deferral of up to $24,500 (shared with any W-2 401(k)) plus an employer profit-sharing contribution (~20% of net SE income, or 25% of S-Corp salary). Every dollar reduces taxable income."},
   s6:{title:"Health Savings Account (HSA)",body:"If you have a High-Deductible Health Plan (HDHP), you can contribute $4,400 (self-only) or $8,750 (family) per year to an HSA. Triple tax advantage: contributions are pre-tax, growth is tax-free, and withdrawals for medical expenses are tax-free. After age 65, withdrawals for any purpose are taxed like a traditional IRA (no penalty)."},
   s7:{title:"Self-Employed Health Insurance",body:"If you're self-employed and pay your own health insurance premiums (not through an employer), 100% of those premiums are deductible above the line, reducing AGI directly. This applies to dental and vision too. Cannot exceed the net profit of the business, and not allowed for months you were eligible for an employer-subsidized plan (including a spouse's)."},
@@ -1067,13 +1085,14 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")closeTip();});
 
 // ── CONSTANTS
 const STATE_RATES={Alabama:5,Alaska:0,Arizona:2.5,Arkansas:3.9,California:13.3,Colorado:4.4,Connecticut:6.99,Delaware:6.6,Florida:0,Georgia:5.19,Hawaii:11,Idaho:5.3,Illinois:4.95,Indiana:2.95,Iowa:3.8,Kansas:5.58,Kentucky:3.5,Louisiana:3,Maine:7.15,Maryland:5.75,Massachusetts:5,Michigan:4.25,Minnesota:9.85,Mississippi:4,Missouri:4.7,Montana:5.9,Nebraska:4.55,Nevada:0,"New Hampshire":0,"New Jersey":10.75,"New Mexico":5.9,"New York":10.9,"North Carolina":3.99,"North Dakota":2.5,Ohio:2.75,Oklahoma:4.5,Oregon:9.9,Pennsylvania:3.07,"Rhode Island":5.99,"South Carolina":6.2,"South Dakota":0,Tennessee:0,Texas:0,Utah:4.5,Vermont:8.75,Virginia:5.75,Washington:0,"West Virginia":4.82,Wisconsin:7.65,Wyoming:0,"Washington DC":10.75};
-const BADGE_COLORS=["#03045E","#FA5F11","#0077B6","#C94A08","#03045E","#00B4D8","#FA5F11","#0077B6","#03045E","#FA5F11","#0077B6","#C94A08","#03045E","#FA5F11","#0077B6","#03045E","#C94A08"];
+const BADGE_COLORS=["#00B4D8","#03045E","#FA5F11","#0077B6","#C94A08","#03045E","#00B4D8","#FA5F11","#0077B6","#03045E","#FA5F11","#0077B6","#C94A08","#03045E","#FA5F11","#0077B6","#03045E","#C94A08"];
 // type: se = SE-tax saving (no deduction) · credit = dollar-for-dollar credit · custom = saving computed in recalc (state[key+"_sav"])
 const STRATEGIES=[
   {id:"s1",  name:"S-Corp Election",              desc:"Eliminate SE tax on profit above reasonable salary",           key:"scorp_ded",   type:"se"},
   {id:"s2",  name:"Home Office Deduction",         desc:"Deduct business-use % of home expenses",                     key:"ho_ded_val"},
   {id:"s3",  name:"Vehicle & Bonus Depreciation",  desc:"First-year write-off on qualifying business vehicle",        key:"veh_ded_val"},
   {id:"s4",  name:"Hire Children in Business",     desc:"Deductible wages shifted to child's low/zero-tax bracket",   key:"kids_total_ded_val", type:"custom"},
+  {id:"s18", name:"Maximize 401(k) Contributions", desc:"Unused employer 401(k) room — limit minus current deferrals",  key:"k401_extra"},
   {id:"s5",  name:"Solo 401(k) / SEP-IRA",         desc:"Maximize pre-tax retirement — up to $72,000 (2026)",        key:"solo_ded"},
   {id:"s6",  name:"Health Savings Account (HSA)",  desc:"Triple tax-advantaged — 2026 family max: $8,750",            key:"hsa_ded"},
   {id:"s7",  name:"Self-Employed Health Insurance",desc:"100% above-the-line deduction of health premiums",          key:"sehi_ded"},
@@ -1167,7 +1186,7 @@ function addBusiness(){
   bizCount++;const n=bizCount;
   const c=document.getElementById("biz-container");
   const d=document.createElement("div");d.className="biz-block";d.id="biz-block-"+n;d.dataset.biz=n;
-  d.innerHTML=`<div style="font-size:10px;font-weight:700;color:var(--navy2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between">Business #${n}${n>1?`<button class="btn-remove" onclick="removeBusiness(${n})">✕ Remove</button>`:""}</div>
+  d.innerHTML=`<div style="font-size:12px;font-weight:700;color:var(--navy2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between">Business #${n}${n>1?`<button class="btn-remove" onclick="removeBusiness(${n})">✕ Remove</button>`:""}</div>
   <div class="grid2">
     <div class="field"><label>Business Name / DBA</label><input type="text" id="biz_name_${n}" placeholder="e.g. Smith Consulting LLC"></div>
     <div class="field"><label>Entity Type</label>
@@ -1177,9 +1196,9 @@ function addBusiness(){
       </select></div>
     <div class="field"><label>Business Revenue — 2025 ($)</label><input type="number" id="biz_rev_${n}" placeholder="0" onchange="autoBiz26(${n});recalc()"></div>
     <div class="field"><label>Business Net Profit — 2025 ($)</label><input type="number" id="biz_profit_${n}" placeholder="0" onchange="autoBiz26(${n});recalc()"></div>
-    <div class="field"><label>Expected Revenue — 2026 ($) <span style="font-weight:400;color:var(--gray3);font-size:9px">(auto-copied, editable)</span></label><input type="number" id="biz_rev26_${n}" placeholder="0" oninput="markManual(this)"></div>
-    <div class="field"><label>Expected Net Profit — 2026 ($) <span style="font-weight:400;color:var(--gray3);font-size:9px">(auto-copied, editable — used for 2026 planning)</span></label><input type="number" id="biz_profit26_${n}" placeholder="0" oninput="markManual(this)"></div>
-    <div class="field"><label>Owner W-2 Salary from this Business ($) <span style="font-weight:400;color:var(--gray3);font-size:9px">(S-Corp / C-Corp — include in W-2 above too)</span></label><input type="number" id="owner_salary_${n}" placeholder="0" onchange="recalc()"></div>
+    <div class="field"><label>Expected Revenue — 2026 ($) <span style="font-weight:400;color:var(--gray3);font-size:11px">(auto-copied, editable)</span></label><input type="number" id="biz_rev26_${n}" placeholder="0" oninput="markManual(this)"></div>
+    <div class="field"><label>Expected Net Profit — 2026 ($) <span style="font-weight:400;color:var(--gray3);font-size:11px">(auto-copied, editable — used for 2026 planning)</span></label><input type="number" id="biz_profit26_${n}" placeholder="0" oninput="markManual(this)"></div>
+    <div class="field"><label>Owner W-2 Salary from this Business ($) <span style="font-weight:400;color:var(--gray3);font-size:11px">(S-Corp / C-Corp — include in W-2 above too)</span></label><input type="number" id="owner_salary_${n}" placeholder="0" onchange="recalc()"></div>
     <div class="field"><label>Industry / Business Type</label>
       <select id="biz_industry_${n}" onchange="showRdHint(${n});recalc()">
         <option value="">— Select —</option><option value="Tech/IT">Technology / IT Services</option>
@@ -1289,8 +1308,8 @@ function evalRD(){
   const any=RD_IDS.some(id=>{const e=document.getElementById(id);return e&&e.checked;});
   const r=document.getElementById("rd_result");if(!r)return;
   show("rd_result",true);show("rd_amt_row",any);sv("rd_credit",any?"Yes":"No");
-  if(any){r.style.cssText="background:var(--green-l);border:2px solid var(--green);color:var(--green);border-radius:8px;padding:12px 16px;font-weight:700;font-size:13px";r.textContent="✅ R&D Tax Credit — LIKELY ELIGIBLE.";}
-  else{r.style.cssText="background:var(--gray1);border:2px solid var(--gray2);color:var(--gray3);border-radius:8px;padding:12px 16px;font-weight:700;font-size:13px";r.textContent="Select qualifying activities above.";}
+  if(any){r.style.cssText="background:var(--green-l);border:2px solid var(--green);color:var(--green);border-radius:8px;padding:12px 16px;font-weight:700;font-size:14px";r.textContent="✅ R&D Tax Credit — LIKELY ELIGIBLE.";}
+  else{r.style.cssText="background:var(--gray1);border:2px solid var(--gray2);color:var(--gray3);border-radius:8px;padding:12px 16px;font-weight:700;font-size:14px";r.textContent="Select qualifying activities above.";}
   recalc();
 }
 
@@ -1323,7 +1342,11 @@ function recalc(){
 
   // 401k / IRA (existing contributions — baseline, not new strategies)
   const k401tp=gn("k401_amt"),k401sp=gn("k401_sp");
-  st("k401_tp_sav",fmt(k401tp*CR));st("k401_sp_sav",fmt(k401sp*CR));
+  // Only UNUSED room counts as a strategy — existing deferrals are already in the baseline
+  const tpRoom=Math.max(Math.min(TAX.k401Deferral,w2tp26)-k401tp,0),spRoom=Math.max(Math.min(TAX.k401Deferral,w2sp26)-k401sp,0);
+  const roomTxt=r=>r>0?fmt(r)+" room → "+fmt(r*CR):"Maxed — $0 extra";
+  st("k401_tp_sav",w2tp26>0?roomTxt(tpRoom):"—");st("k401_sp_sav",w2sp26>0?roomTxt(spRoom):"—");
+  state.k401_extra=tpRoom+spRoom;
   const iraYes=gv("ira_contrib")==="Yes",iraType=gv("ira_type");
   const iraDed=iraYes&&iraType==="Traditional"?gn("ira_amt"):0;
   show("ira_note",iraYes);
@@ -1447,13 +1470,14 @@ function recalc(){
   if(solo401kEligible){
     const halfSE=(Math.min(seEarned*TAX.seFactor,TAX.ssWageBase)*0.124+seEarned*TAX.seFactor*0.029)/2;
     const earned=Math.max(seEarned-halfSE,0)+entitySalary;
-    const defCap=Math.min(Math.max(TAX.k401Deferral-k401tp,0),earned);
+    const tpW2Def=k401tp+(counted(STRATEGIES.find(x=>x.id==="s18"))?tpRoom:0);   // limit shared with W-2 401(k), incl. recommended max-out
+    const defCap=Math.min(Math.max(TAX.k401Deferral-tpW2Def,0),earned);
     const empCap=Math.max(seEarned-halfSE,0)*0.20+entitySalary*0.25;
     const defIn=gn("solo_deferral"),empIn=gn("solo_employer");
     const def=Math.min(defIn,defCap),emp=Math.min(empIn,empCap);
     soloDed=Math.min(def+emp,TAX.total415c,earned);
     const msgs=[];
-    if(defIn>def)msgs.push("Employee deferral capped at "+fmt(defCap)+(k401tp>0?" (the "+fmt(TAX.k401Deferral)+" limit is shared with the "+fmt(k401tp)+" W-2 401(k))":""));
+    if(defIn>def)msgs.push("Employee deferral capped at "+fmt(defCap)+(tpW2Def>0?" (the "+fmt(TAX.k401Deferral)+" limit is shared with the "+fmt(tpW2Def)+" W-2 401(k) deferral, including the recommended max-out)":""));
     if(empIn>emp)msgs.push("Employer contribution capped at "+fmt(empCap)+" (~20% of net SE income / 25% of S-Corp salary)");
     if(def+emp>soloDed)msgs.push("Total capped at "+fmt(soloDed)+" ("+fmt(TAX.total415c)+" §415(c) limit / earned income)");
     show("solo_cap_note",msgs.length>0);st("solo_cap_note","⚠️ "+msgs.join(" · "));
@@ -1520,11 +1544,13 @@ function recalc(){
   // OPPORTUNITY ZONE — only gains the client commits (left after TLH); shows tax DEFERRED
   const remSt=cgSt-offSt,remLt=cgLt+cgRe-offLt,ozAvail=remSt+remLt;
   const ozEligible=totalCG>0;show("oz-detail",ozEligible);
+  const ozEl0=document.getElementById("oz_cg_amt");
+  if(ozEl0&&!ozEl0.dataset.manual)sv("oz_cg_amt",cgSt>0?Math.round(cgSt*TAX.ozDefaultStPct):"");   // policy default: 25% of ST gains
   const ozDed=Math.min(gn("oz_cg_amt"),ozAvail);
-  const ozLt=Math.min(ozDed,remLt),ozSt=ozDed-ozLt;          // LT gains first (typical QOZ source)
+  const ozSt=Math.min(ozDed,remSt),ozLt=ozDed-ozSt;          // short-term gains first (taxed at ordinary rates)
   const ozDeferredTax=ozLt*cgRate+ozSt*CR;
   const ozEl=document.getElementById("oz_cg_amt");if(ozEl)ozEl.placeholder=ozAvail>0?"Up to "+fmt(ozAvail):"0";
-  st("oz_hint",ozAvail>0?(gn("oz_cg_amt")>ozAvail?"Capped at "+fmt(ozAvail)+" of gains available after loss harvesting":fmt(ozAvail)+" of gains available — enter the amount the client will invest"):"");
+  st("oz_hint",ozAvail>0?(gn("oz_cg_amt")>ozAvail?"Capped at "+fmt(ozAvail)+" of gains available after loss harvesting":fmt(ozAvail)+" of gains available"+(cgSt>0?" · default = 25% of "+fmt(cgSt)+" short-term gains":" — enter the amount the client will invest")):"");
   st("oz_deferred_tax",fmt(ozDeferredTax));state.oz_ded=ozDed;state.oz_ded_sav=ozDeferredTax;
   setBadge("oz-badge","oz-sav-display",ozDeferredTax,ozEligible);
 
@@ -1535,7 +1561,8 @@ function recalc(){
   setBadge("og-badge","og-sav-display",ogIDC*CR,ogIDC>0);
 
   // ADJUSTED AGI components (after all above-the-line / business / investment strategies; before donations)
-  const retDed=k401tp+k401sp+iraDed+soloDed+dbpAmt;
+  const k401Extra=counted(STRATEGIES.find(x=>x.id==="s18"))?state.k401_extra:0;
+  const retDed=k401tp+k401sp+k401Extra+iraDed+soloDed+dbpAmt;
   const bizDed=hoDed+totalVeh+kidsTotalDed+sehiAmt+hsaAmt+acctAmt+augDed+costseg;
   const otherAdj=ogIDC+tlhUsed+ozDed;
   const incomeRoom=Math.max(state.grossInc-retDed-bizDed-otherAdj,0);   // income left for the K-1 loss to offset
@@ -1543,6 +1570,8 @@ function recalc(){
   // BONUS DEP INVESTMENTS — one shared EBL cap (above business income), never more than remaining income;
   // passive scenario offsets passive income only. Unused active loss → NOL; unused passive loss → suspended.
   const EBL=TAX.ebl[FS];
+  const mcgEl=document.getElementById("mcg_inv");
+  if(mcgEl&&!mcgEl.dataset.manual)sv("mcg_inv",state.grossInc>0?(state.grossInc<TAX.mcgDefaultIncomeThreshold?TAX.mcgDefaultLow:TAX.mcgDefaultHigh):"");
   const inv=gn("mcg_inv"),k1=inv*(gn("mcg_mult")||4),mat=gv("mcg_mat")==="Yes";
   const inv2=gn("mcg2_inv"),k12=inv2*(gn("mcg2_mult")||4),mat2=gv("mcg2_mat")==="Yes";
   const activeK1=(mat?k1:0)+(mat2?k12:0);
@@ -1576,13 +1605,13 @@ function recalc(){
   const donStatus=document.getElementById("sum-don-status");
   if(donBadge){
     if(eligible){
-      donBadge.textContent="✅ Eligible";donBadge.style.cssText="padding:7px 14px;border-radius:6px;font-weight:800;font-size:13px;min-width:120px;text-align:center;background:var(--green-l);color:var(--green);border:1.5px solid var(--green)";
+      donBadge.textContent="✅ Eligible";donBadge.style.cssText="padding:7px 14px;border-radius:6px;font-weight:800;font-size:14px;min-width:120px;text-align:center;background:var(--green-l);color:var(--green);border:1.5px solid var(--green)";
       if(donHdr)donHdr.style.background="linear-gradient(135deg,#1a5c7a,#0077B6)";
-      if(donStatus){donStatus.textContent="✅ Eligible";donStatus.style.cssText="font-size:12px;font-weight:800;padding:4px 10px;border-radius:5px;display:inline-block;background:var(--green-l);color:var(--green)";}
+      if(donStatus){donStatus.textContent="✅ Eligible";donStatus.style.cssText="font-size:13px;font-weight:800;padding:4px 10px;border-radius:5px;display:inline-block;background:var(--green-l);color:var(--green)";}
     }else{
-      donBadge.textContent="🔒 < $1M";donBadge.style.cssText="padding:7px 14px;border-radius:6px;font-weight:800;font-size:13px;min-width:120px;text-align:center;background:var(--gray1);color:var(--gray3);border:1.5px solid var(--gray2)";
+      donBadge.textContent="🔒 < $1M";donBadge.style.cssText="padding:7px 14px;border-radius:6px;font-weight:800;font-size:14px;min-width:120px;text-align:center;background:var(--gray1);color:var(--gray3);border:1.5px solid var(--gray2)";
       if(donHdr)donHdr.style.background="var(--navy2)";
-      if(donStatus){donStatus.textContent="🔒 Not Eligible";donStatus.style.cssText="font-size:12px;font-weight:800;padding:4px 10px;border-radius:5px;display:inline-block;background:rgba(255,255,255,.1);color:rgba(255,255,255,.4)";}
+      if(donStatus){donStatus.textContent="🔒 Not Eligible";donStatus.style.cssText="font-size:13px;font-weight:800;padding:4px 10px;border-radius:5px;display:inline-block;background:rgba(255,255,255,.1);color:rgba(255,255,255,.4)";}
     }
   }
   const capTotal=adjAGI*TAX.charityAgiCap,floor=adjAGI*TAX.charityFloorPct;
@@ -1611,7 +1640,7 @@ function recalc(){
   st("tick-agi",fmt(adjAGI));
 
   // Marginal-rate sanity check: do the strategies push the client into a lower bracket?
-  const remPref=Math.max(prefInc-offLt-ozLt,0);
+  const remPref=Math.max(prefInc-offLt-ozLt,0);   // ozLt now after ST
   const ordAfter=Math.max(adjAGI-remPref-Math.max(state.donation_ded,TAX.stdDed[FS]),0);
   const bracketAfter=marginalBracket(ordAfter,TAX.brackets[FS]);
   const rateMsg=state.grossInc>0&&bracketAfter<state.fed_rate-0.001
@@ -1737,22 +1766,22 @@ function initStratTable(){
   STRATEGIES.forEach((s,i)=>{
     if(!state.strategy_status[s.id])state.strategy_status[s.id]="Review Needed";
     const tr=document.createElement("tr");tr.id="row-"+s.id;
-    tr.innerHTML=`<td style="padding:9px 12px;border-bottom:1px solid var(--gray2)"><div style="width:22px;height:22px;border-radius:50%;background:${BADGE_COLORS[i%BADGE_COLORS.length]};display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:white">${i+1}</div></td>
+    tr.innerHTML=`<td style="padding:9px 12px;border-bottom:1px solid var(--gray2)"><div style="width:22px;height:22px;border-radius:50%;background:${BADGE_COLORS[i%BADGE_COLORS.length]};display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:white">${i+1}</div></td>
     <td style="padding:9px 12px;border-bottom:1px solid var(--gray2)">
       <div style="display:flex;align-items:center;gap:4px">
-        <span style="font-weight:700;color:var(--navy);font-size:12px">${s.name}</span>
+        <span style="font-weight:700;color:var(--navy);font-size:13px">${s.name}</span>
         <button class="strat-info-btn" onclick="showTip('${s.id}')" title="What is this strategy?">ℹ</button>
       </div>
-      <div style="font-size:10px;color:var(--gray3);margin-top:2px">${s.desc}</div>
+      <div style="font-size:12px;color:var(--gray3);margin-top:2px">${s.desc}</div>
     </td>
-    <td style="padding:9px 12px;border-bottom:1px solid var(--gray2);text-align:right;font-size:12px;color:var(--gray4)" id="ded-${s.id}">—</td>
-    <td style="padding:9px 12px;border-bottom:1px solid var(--gray2);text-align:right;font-size:13px;font-weight:700;color:var(--green)" id="sav-${s.id}">—</td>
+    <td style="padding:9px 12px;border-bottom:1px solid var(--gray2);text-align:right;font-size:13px;color:var(--gray4)" id="ded-${s.id}">—</td>
+    <td style="padding:9px 12px;border-bottom:1px solid var(--gray2);text-align:right;font-size:14px;font-weight:700;color:var(--green)" id="sav-${s.id}">—</td>
     <td style="padding:9px 12px;border-bottom:1px solid var(--gray2);text-align:center">
-      <select onchange="setStatus('${s.id}',this.value)" id="sel-${s.id}" style="border:1.5px solid var(--gray2);border-radius:6px;padding:5px 8px;font-size:11px;background:var(--blue-in);font-family:inherit;width:140px">
+      <select onchange="setStatus('${s.id}',this.value)" id="sel-${s.id}" style="border:1.5px solid var(--gray2);border-radius:6px;padding:5px 8px;font-size:13px;background:var(--blue-in);font-family:inherit;width:140px">
         <option value="Applicable">✅ Applicable</option><option value="Not Applicable">❌ Not Applicable</option><option value="Review Needed" selected>🔍 Review Needed</option>
       </select></td>
     <td style="padding:9px 12px;border-bottom:1px solid var(--gray2);text-align:center">
-      <select onchange="setPriority('${s.id}',this.value)" id="pri-${s.id}" style="border:1.5px solid var(--gray2);border-radius:6px;padding:5px 8px;font-size:11px;background:var(--blue-in);font-family:inherit;width:65px">
+      <select onchange="setPriority('${s.id}',this.value)" id="pri-${s.id}" style="border:1.5px solid var(--gray2);border-radius:6px;padding:5px 8px;font-size:13px;background:var(--blue-in);font-family:inherit;width:65px">
         <option value="">—</option><option value="1">⭐1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option>
       </select></td>`;
     tbody.appendChild(tr);

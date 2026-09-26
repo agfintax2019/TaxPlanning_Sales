@@ -18,6 +18,8 @@ Confidence: **Confirmed** = published IRS/SSA figure · **Verify** = best availa
 | `childAdultMaxSalary` | $24,000 | Policy | — | Kids label |
 | `luxAutoYr1Bonus` / `NoBonus` | $20,200 / $12,200 | **Verify — 2025 figures** | Rev. Proc. 2025-16. Replace with the 2026 Rev. Proc. when released | s3 tooltip ("~$20,000") |
 | `scorpMinProfit` | $40,000 | Policy | — | S-Corp badge, not-eligible note |
+| `ozDefaultStPct` | 25% | Policy | Default QOZ investment = 25% of short-term gains | OZ label |
+| `mcgDefault*` | $50k below $500k gross income, else $100k | Policy | Default bonus-depreciation investment #1 | Investment amount label |
 | `scorpSalaryPct` | 25% | Policy (starting point only) | The IRS has **no** fixed % rule. Reasonable compensation must be documented | S-Corp salary label & note |
 | `ltcgRate` + `niitRate` | 20% + 3.8% | Confirmed | §1(h), §1411. Assumes a high earner (top LTCG bracket) | RE CG note |
 | `niitThreshold` | $250k MFJ / $200k single & HoH / $125k MFS | Confirmed (not indexed) | §1411 | — |

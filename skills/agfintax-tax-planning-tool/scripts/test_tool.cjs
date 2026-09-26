@@ -49,7 +49,9 @@ const money = n => "$" + Math.round(n).toLocaleString("en-US");
   const tab = n => page.evaluate(n => switchTab(n), n);
 
   check("script loads with no JS errors", errors.join(" | "), "");
-  check("strategy table renders 17 rows", await page.evaluate(() => document.querySelectorAll("#strat-tbody tr").length), 17);
+  check("strategy table renders 18 rows", await page.evaluate(() => document.querySelectorAll("#strat-tbody tr").length), 18);
+  check("Other Income drill-down collapsed by default", await page.evaluate(() => getComputedStyle(document.getElementById("other-inc-body")).display), "none");
+  check("TLH drill-down collapsed by default", await page.evaluate(() => getComputedStyle(document.getElementById("tlh-body")).display), "none");
 
   // tabs
   for (let i = 0; i < 7; i++) {
@@ -110,6 +112,17 @@ const money = n => "$" + Math.round(n).toLocaleString("en-US");
   }
   await set("solo_deferral", ""); await set("solo_employer", "");
 
+  // ── 401(k): only UNUSED room counts as savings
+  await set("w2_tp", 200000); await set("w2_sp", 8000);
+  await set("k401_status", "custom"); await set("k401_amt", 10000);
+  check("TP 401k room = limit − current", await txt("k401_tp_sav"), "$14,500 room → " + money(14500 * 0.37));
+  check("spouse room limited to W-2 pay", await txt("k401_sp_sav"), "$8,000 room → " + money(8000 * 0.37));
+  check("Maximize 401(k) strategy = room only", await txt("sav-s18"), money(22500 * 0.37));
+  await set("k401_status", "max");
+  check("maxed 401k adds $0", await txt("k401_tp_sav"), "Maxed — $0 extra");
+  await set("k401_status", "0"); await set("w2_tp", ""); await set("w2_sp", "");
+  check("no W-2 → no 401k strategy", await txt("sav-s18"), "—");
+
   // ── Home office: already claiming ≥ $20k → no NEW savings
   await set("ho_claiming", "Yes"); await set("ho_current_amt", 25000);
   check("optimized home office adds $0", await txt("sav-s2"), "—");
@@ -141,6 +154,15 @@ const money = n => "$" + Math.round(n).toLocaleString("en-US");
   await set("hsa_elig", "Yes"); await set("hsa_cov", "single"); await set("hsa_amt", 9000);
   check("HSA capped at self-only limit", await txt("sav-s6"), money(4400 * 0.37));
   await set("hsa_elig", "No");
+
+  // ── OZ default = 25% of short-term gains (policy), editable
+  await set("cg_st", 40000);
+  check("OZ defaults to 25% of ST gains", await page.inputValue("#oz_cg_amt"), "10000");
+  check("OZ default valued at ordinary rate", await txt("oz_deferred_tax"), money(10000 * 0.37));
+  await set("oz_cg_amt", 20000);
+  await set("cg_st", 60000);
+  check("manual OZ amount not overwritten", await page.inputValue("#oz_cg_amt"), "20000");
+  await set("oz_cg_amt", ""); await set("cg_st", "");
 
   // ── Capital gains: TLH + OZ not auto-counted
   await set("cg_lt", 100000);
@@ -214,7 +236,17 @@ const money = n => "$" + Math.round(n).toLocaleString("en-US");
   check("preview lists strategies", await page.evaluate(() => document.querySelectorAll("#pv-strat-rows tr").length > 1), true);
   const [dl] = await Promise.all([page.waitForEvent("download", { timeout: 5000 }), page.click("#dl-btn")]);
   check("Excel filename", dl.suggestedFilename(), "AG_FinTax_Client_TaxPlan_2026.xlsx");
-  check("Excel has 17 strategy rows", await page.evaluate(() => window.__xlsxRows.filter(r => r.length === 6).length - 1), 17);
+  check("Excel has 18 strategy rows", await page.evaluate(() => window.__xlsxRows.filter(r => r.length === 6).length - 1), 18);
+
+  // ── Bonus-dep default investment (fresh page): $50k under $500k income, $100k above
+  await page.reload();
+  check("no default investment with no income", await page.inputValue("#mcg_inv"), "");
+  await set("biz_profit_1", 300000);
+  check("default investment $50k when income < $500k", await page.inputValue("#mcg_inv"), "50000");
+  await set("w2_tp", 400000);
+  check("default investment $100k when income ≥ $500k", await page.inputValue("#mcg_inv"), "100000");
+  await set("mcg_inv", 75000); await set("w2_tp", 0);
+  check("manual investment amount not overwritten", await page.inputValue("#mcg_inv"), "75000");
 
   // ── Mobile: no horizontal page scroll at 390px
   await page.setViewportSize({ width: 390, height: 844 });

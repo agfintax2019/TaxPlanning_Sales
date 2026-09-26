@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-26 (b) — Sales-team feedback
+- **401(k):** existing contributions are no longer shown as savings. The new strategy #18, **Maximize 401(k) Contributions**, counts only the unused room (limit − current deferral, capped at W-2 pay) for the TP and spouse. The Solo 401(k) deferral limit accounts for the recommended max-out.
+- **Optional drill-downs** (collapsed by default, tagged "Sales rep can skip"): Other Income (passive, interest/dividends, other) and Unrealized Gains / Losses & Tax-Loss Harvesting.
+- **Opportunity Zone** amount defaults to 25% of short-term capital gains (editable). ST gains are applied first, at the ordinary rate.
+- **Bonus-depreciation Investment 1** defaults to $50,000 when gross income is under $500,000, and $100,000 otherwise (editable).
+- **Larger fonts throughout:** small text +2px, body text +1px.
+- Test suite: 79 checks.
+
 ## 2026-09-26 — Bug-fix release + packaged as a skill
 
 ### Critical
